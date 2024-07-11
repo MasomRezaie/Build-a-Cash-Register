@@ -41,7 +41,7 @@ const calculateChange = (cash) => {
       cidCopy[cidCopy.length - 1 - i][1] = Number(
         (cidCopy[cidCopy.length - 1 - i][1] - denominations[i]).toFixed(2),
       );
-      change = Number((change - denominations[i]).toFixed(2));
+      const change = Number((change - denominations[i]).toFixed(2));
       totalDenom += denominations[i];
     }
     if (totalDenom > 0) {
@@ -79,7 +79,7 @@ const checkRegister = () => {
       displayChangeDue.innerText = 'Status: INSUFFICIENT_FUNDS';
     } else {
       displayChangeDue.innerHTML = `Status: <b>${status}</b> <br><br>${change.map(([denomination, amount]) => `<b>${denomination}</b>: $${amount.toFixed(2)} <br>`).join(' ')}`;
-      cid = status === 'CLOSED' ? cid.map(([denomination]) => [denomination, 0]) : calculateChange(cashInt).change;
+      const cid = status === 'CLOSED' ? cid.map(([denomination]) => [denomination, 0]) : calculateChange(cashInt).change;
     }
   }
   displayCashInDrawer();
