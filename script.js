@@ -39,7 +39,7 @@ const calculateChange = (cash) => {
     let totalDenom = 0;
     while (change >= denominations[i] && cidCopy[cidCopy.length - 1 - i][1] > 0) {
       cidCopy[cidCopy.length - 1 - i][1] = Number(
-        (cidCopy[cidCopy.length - 1 - i][1] - denominations[i]).toFixed(2)
+        (cidCopy[cidCopy.length - 1 - i][1] - denominations[i]).toFixed(2),
       );
       change = Number((change - denominations[i]).toFixed(2));
       totalDenom += denominations[i];
