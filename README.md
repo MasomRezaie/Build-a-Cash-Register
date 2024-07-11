@@ -19,7 +19,7 @@ link correctly the css and js file in html. (<link<link rel="stylesheet" href=".
 </head>>)
 
 ## Demo 📸
-![Project Demo](./Masom.PNG)
+![Project Demo](./Capture.PNG)
 
 
 ## Technologies Used 🛠️
