@@ -56,3 +56,29 @@ const calculateChange = (cash) => {
 
   return { status, change: changeArr };
 };
+
+const checkRegister = () => {
+  const cashInt = parseFloat(cashInput.value);
+
+  if (cashInt < price) {
+    alert('Customer does not have enough money to purchase the item');
+    return;
+  }
+
+  if (cashInt === price) {
+    displayChangeDue.innerText = 'No change due - customer paid with exact cash';
+    return;
+  }
+
+  if (cashInput.value !== '') {
+    const { status, change } = calculateChange(cashInt);
+
+    if (status === 'INSUFFICIENT_FUNDS') {
+      displayChangeDue.innerText = 'Status: INSUFFICIENT_FUNDS';
+    } else {
+      displayChangeDue.innerHTML = `Status: <b>${status}</b> <br><br>${change.map(([denomination, amount]) => `<b>${denomination}</b>: $${amount.toFixed(2)} <br>`).join(' ')}`;
+      cid = status === 'CLOSED' ? cid.map(([denomination]) => [denomination, 0]) : calculateChange(cashInt).change;
+    }
+  }
+  displayCashInDrawer();
+};
