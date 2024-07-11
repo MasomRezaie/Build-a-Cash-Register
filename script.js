@@ -79,7 +79,7 @@ const checkRegister = () => {
       displayChangeDue.innerText = 'Status: INSUFFICIENT_FUNDS';
     } else {
       displayChangeDue.innerHTML = `Status: <b>${status}</b> <br><br>${change.map(([denomination, amount]) => `<b>${denomination}</b>: $${amount.toFixed(2)} <br>`).join(' ')}`;
-     cid = status === 'CLOSED' ? cid.map(([denomination]) => [denomination, 0]) : calculateChange(cashInt).change;
+      cid = status === 'CLOSED' ? cid.map(([denomination]) => [denomination, 0]) : calculateChange(cashInt).change;
     }
   }
   displayCashInDrawer();
