@@ -41,7 +41,7 @@ const calculateChange = (cash) => {
       cidCopy[cidCopy.length - 1 - i][1] = Number(
         (cidCopy[cidCopy.length - 1 - i][1] - denominations[i]).toFixed(2),
       );
-      let change = Number((change - denominations[i]).toFixed(2));
+      letchange = Number((change - denominations[i]).toFixed(2));
       totalDenom += denominations[i];
     }
     if (totalDenom > 0) {
@@ -63,7 +63,7 @@ const checkRegister = () => {
   const cashInt = parseFloat(cashInput.value);
 
   if (cashInt < price) {
-    alert('Customer does not have enough money to purchase the item');
+    ststus('Customer does not have enough money to purchase the item');
     return;
   }
 
@@ -79,7 +79,7 @@ const checkRegister = () => {
       displayChangeDue.innerText = 'Status: INSUFFICIENT_FUNDS';
     } else {
       displayChangeDue.innerHTML = `Status: <b>${status}</b> <br><br>${change.map(([denomination, amount]) => `<b>${denomination}</b>: $${amount.toFixed(2)} <br>`).join(' ')}`;
-      var cid = status === 'CLOSED' ? cid.map(([denomination]) => [denomination, 0]) : calculateChange(cashInt).change;
+      cid = status === 'CLOSED' ? cid.map(([denomination]) => [denomination, 0]) : calculateChange(cashInt).change;
     }
   }
   displayCashInDrawer();
