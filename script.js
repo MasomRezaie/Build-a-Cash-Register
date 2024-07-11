@@ -63,7 +63,7 @@ const checkRegister = () => {
   const cashInt = parseFloat(cashInput.value);
 
   if (cashInt < price) {
-    ststus:('Customer does not have enough money to purchase the item');
+    alert('Customer does not have enough money to purchase the item');
     return;
   }
 
@@ -79,7 +79,7 @@ const checkRegister = () => {
       displayChangeDue.innerText = 'Status: INSUFFICIENT_FUNDS';
     } else {
       displayChangeDue.innerHTML = `Status: <b>${status}</b> <br><br>${change.map(([denomination, amount]) => `<b>${denomination}</b>: $${amount.toFixed(2)} <br>`).join(' ')}`;
-      let cid = status === 'CLOSED' ? cid.map(([denomination]) => [denomination, 0]) : calculateChange(cashInt).change;
+     cid = status === 'CLOSED' ? cid.map(([denomination]) => [denomination, 0]) : calculateChange(cashInt).change;
     }
   }
   displayCashInDrawer();
