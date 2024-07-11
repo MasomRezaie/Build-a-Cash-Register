@@ -5,3 +5,18 @@
   align-items: center;
 }
 
+.container-box {
+  width: 30%;
+  background-color: rgb(253, 253, 253);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 34px;
+  margin-top: 24px;
+  border-radius: 11px;
+  border: 1px solid lightgrey;
+}
+
+.input-box {
+  width: 100%;
+}
