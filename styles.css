@@ -28,3 +28,15 @@
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
+
+.input-box button {
+  width: 23%;
+  padding: 8px;
+  border: 1px solid lightgrey;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+  color: rgb(4, 168, 4);
+  font-size: 18px;
+  margin-top: 2px;
+}
