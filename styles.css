@@ -40,3 +40,8 @@
   font-size: 18px;
   margin-top: 2px;
 }
+
+#change-due {
+  border: 1px solid lightgrey;
+  padding: 8px;
+}
