@@ -82,3 +82,13 @@ const checkRegister = () => {
   }
   displayCashInDrawer();
 };
+
+window.onload = displayCashInDrawer;
+purchaseBtn.addEventListener('click', checkRegister);
+document.addEventListener('DOMContentLoaded', () => {
+  cashInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      checkRegister();
+    }
+  });
+});
