@@ -2,7 +2,7 @@ const cashInput = document.getElementById('cash');
 const displayChangeDue = document.getElementById('change-due');
 const purchaseBtn = document.getElementById('purchase-btn');
 const displayCid = document.getElementById('cashdrawer');
-const price = 19.5;
+const price = 3.26;
 
 const cid = [
   ['PENNY', 1.01],
