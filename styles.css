@@ -7,14 +7,14 @@
 
 body {
   color: aliceblue;
-  background-color: rgb(63, 24, 71);
+  background-color: rgb(246, 250, 248);
 }
 
 #container {
   width: 33%;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgb(154, 59, 174);
+  background-color: rgba(26, 238, 253, 0.871);
   text-align: center;
   margin-top: 10vh;
   padding: 20px;
